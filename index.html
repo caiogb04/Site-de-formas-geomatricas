@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Comandos HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      color: #0d3b66;
+    }
+
+    /* Estilo das formas */
+    .forma {
+      width: 100px;
+      height: 100px;
+      margin: 20px auto;
+      transition: all 0.5s;
+    }
+
+    /* Quadrado */
+    #quadrado {
+      background-color: red;
+    }
+
+    /* Círculo */
+    #circulo {
+      background-color: green;
+      border-radius: 50%;
+    }
+
+    /* Triângulo usando border */
+    #triangulo {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid blue;
+      margin: 20px auto;
+      transition: all 0.5s;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+      background-color: #0d3b66;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #054a91;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Comandos HTML e CSS Simples</h1>
+  <p>Clique no botão para alterar as formas!</p>
+
+  <!-- Formas geométricas -->
+  <div id="quadrado" class="forma"></div>
+  <div id="circulo" class="forma"></div>
+  <div id="triangulo"></div>
+
+  <!-- Botão -->
+  <button onclick="mudarFormas()">Mudar Cor e Tamanho</button>
+
+  
+  <script>
+    function mudarFormas() {
+      // Quadrado
+      const quadrado = document.getElementById('quadrado');
+      quadrado.style.backgroundColor = quadrado.style.backgroundColor === 'red' ? 'orange' : 'red';
+      quadrado.style.width = quadrado.style.width === '100px' ? '150px' : '100px';
+      quadrado.style.height = quadrado.style.height === '100px' ? '150px' : '100px';
+
+      // Círculo
+      const circulo = document.getElementById('circulo');
+      circulo.style.backgroundColor = circulo.style.backgroundColor === 'green' ? 'purple' : 'green';
+      circulo.style.width = circulo.style.width === '100px' ? '150px' : '100px';
+      circulo.style.height = circulo.style.height === '100px' ? '150px' : '100px';
+
+      // Triângulo
+      const triangulo = document.getElementById('triangulo');
+      triangulo.style.borderBottomColor = triangulo.style.borderBottomColor === 'blue' ? 'pink' : 'blue';
+      triangulo.style.borderLeftWidth = triangulo.style.borderLeftWidth === '50px' ? '70px' : '50px';
+      triangulo.style.borderRightWidth = triangulo.style.borderRightWidth === '50px' ? '70px' : '50px';
+      triangulo.style.borderBottomWidth = triangulo.style.borderBottomWidth === '100px' ? '120px' : '100px';
+    }
+  </script>
+
+</body>
+</html>
